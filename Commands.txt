@@ -1,0 +1,15 @@
+gcloud app deploy --image-url gcr.io/[PROJECT-ID]/[IMAGE-NAME]:[TAG]
+
+
+gcloud config get-value project
+
+gcloud builds submit --region=us-central1 --tag us-central1.pkg.dev/openedx-386314/openedx-appegninev1-repo/openedx-image:v1.1
+
+gcloud app deploy --image-url gcr.io/openedx-386314/openedxv1:v1.1
+
+
+gcloud app deploy --image-url gcr.io/openedx-386314/openedx-appegninev1-repo:v1.1
+
+
+
+gcloud artifacts repositories create openedx-appegninev1-repo --repository-format=docker --location=us-central1 --description="Docker repository"
